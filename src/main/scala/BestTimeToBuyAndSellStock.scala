@@ -2,6 +2,7 @@ import scala.annotation.tailrec
 
 class BestTimeToBuyAndSellStock {
   def maxProfit(StockPricesArray: Array[Int]): Int = {
+    if(StockPricesArray.isEmpty) return 0
     @tailrec
     def maxProfitHelper(StockPricesArray: List[Int], maxProfit: Int, prevBought: Int): Int = {
       StockPricesArray match {
